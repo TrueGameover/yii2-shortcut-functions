@@ -323,7 +323,7 @@ if (!function_exists('url')) {
      *   for protocol-relative URL).
      *
      * @return string the generated URL
-     * @throws InvalidParamException a relative route is given while there is no active controller
+     * @throws \yii\base\InvalidParamException a relative route is given while there is no active controller
      */
     function url($url = '', $scheme = false) {
         return call_user_func_array(['\yii\helpers\Url', 'to'], func_get_args());
@@ -550,7 +550,7 @@ if (!function_exists('get_alias')) {
      * @param bool $throwException whether to throw an exception if the given alias is invalid.
      * If this is false and an invalid alias is given, false will be returned by this method.
      * @return string|bool the path corresponding to the alias, false if the root alias is not previously registered.
-     * @throws InvalidParamException if the alias is invalid while $throwException is true.
+     * @throws \yii\base\InvalidParamException if the alias is invalid while $throwException is true.
      */
     function get_alias($alias, $throwException = true) {
         return \Yii::getAlias($alias, $throwException);
